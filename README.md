@@ -5,7 +5,7 @@
 
 ### 1. Overview
 
-This repository houses the core intelligence for **semantic literature retrieval** and **topic discovery** with demo [nextaiconf.com](https://nextaiconf.com). It serves as the backend engine for the Researcher Module within the **XtraMCP** framework [[PaperDebugger](#cite-paperdebugger) [Github](https://github.com/PaperDebugger/PaperDebugger), [XtraGPT](#cite-xtragpt) [Github](https://github.com/NuoJohnChen/XtraGPT)], powering the **PaperDebugger** writing assistant [[PaperDebugger](#cite-paperdebugger) Github]. It also provides the technological infrastructure required to operationalize the **Community-Federated Conference (CFC)** model, which addresses the sustainability crisis in centralized AI conferences [[Position](#cite-position) [Github](https://github.com/NuoJohnChen/AI_Conf_Crisis)].
+This repository houses the core intelligence for **semantic literature retrieval** and **topic discovery** with demo [nextaiconf.com](https://nextaiconf.com). It serves as the backend engine for the Researcher Module within the **XtraMCP** framework [[PaperDebugger](#cite-paperdebugger) [Github](https://github.com/PaperDebugger/PaperDebugger), [XtraGPT](#cite-xtragpt) [Github](https://github.com/NuoJohnChen/XtraGPT)], powering the **PaperDebugger** writing assistant [[PaperDebugger](#cite-paperdebugger)]. It also provides the technological infrastructure required to operationalize the **Community-Federated Conference (CFC)** model, which addresses the sustainability crisis in centralized AI conferences [[Position](#cite-position) [Github](https://github.com/NuoJohnChen/AI_Conf_Crisis)].
 
 ---
 
@@ -123,6 +123,7 @@ This helps restore the **Community Building** function of conferences, enabling 
 ## 6 Reference
 
 <div id="cite-paperdebugger"></div>
+
 ```bibtex
 @misc{hou2025paperdebugger,
       title={PaperDebugger: A Plugin-Based Multi-Agent System for In-Editor Academic Writing, Review, and Editing}, 
@@ -136,6 +137,7 @@ This helps restore the **Community Building** function of conferences, enabling 
 ```
 
 <div id="cite-xtragpt"></div>
+
 ```bibtex
 @misc{chen2025xtragpt,
       title={XtraGPT: Context-Aware and Controllable Academic Paper Revision for Human-AI Collaboration}, 
@@ -149,6 +151,7 @@ This helps restore the **Community Building** function of conferences, enabling 
 ```
 
 <div id="cite-position"></div>
+
 ```bibtex
 @misc{chen2025position,
       title={Position: The Current AI Conference Model is Unsustainable! Diagnosing the Crisis of Centralized AI Conference}, 
