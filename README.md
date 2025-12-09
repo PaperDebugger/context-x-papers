@@ -80,7 +80,7 @@ The `app.py` engine utilizes `paperdb` data to implement two bidirectional flows
 
 ### 4. Role in XtraMCP & PaperDebugger
 
-This repository functions as the **Researcher Node** within the XtraMCP architecture, decoupling orchestration from reasoning [1].
+This repository functions as the **Researcher Node** within the XtraMCP architecture, decoupling orchestration from reasoning [XtraGPT](#cite-xtragpt).
 
 #### 4.1 Researcher in the XtraMCP Architecture
 
@@ -91,7 +91,7 @@ This repository functions as the **Researcher Node** within the XtraMCP architec
 
 #### 4.2 Service to PaperDebugger
 
-The user-facing Overleaf extension **PaperDebugger** [3] uses this backend to provide real-time **Deep Research** capabilities:
+The user-facing Overleaf extension **PaperDebugger** [PaperDebugger](#cite-paperdebugger) uses this backend to provide real-time **Deep Research** capabilities:
 
 - It analyzes the user’s current manuscript draft to:
   - retrieve highly relevant literature; and
@@ -101,7 +101,7 @@ The user-facing Overleaf extension **PaperDebugger** [3] uses this backend to pr
 
 ### 5. Addressing the AI Conference Crisis: The CFC Model
 
-Centralized AI conference models are becoming unsustainable due to **exponential growth in submissions** and **inefficient knowledge dissemination** [2]. This codebase is the technical backbone of the proposed **Community-Federated Conference (CFC)** solution.
+Centralized AI conference models are becoming unsustainable due to **exponential growth in submissions** and **inefficient knowledge dissemination** [Position](#cite-position). This codebase is the technical backbone of the proposed **Community-Federated Conference (CFC)** solution.
 
 #### 5.1 Mitigating Information Overload
 
