@@ -1,31 +1,34 @@
-# XtraMCP Researcher Node & Community-Federated Conference (CFC) Curation Engine
+# Semantic Literature Retrieval Engine for Academic Research & Conference Curation
 
 > 点击切换语言 · Click to switch language：
 > **[English](./README.md)** | **[中文](./README_zh.md)**
 
-This repository houses the core intelligence for **semantic literature retrieval** and **topic discovery** with demo [nextaiconf.com](https://nextaiconf.com). It serves as the backend engine for the Researcher Module within the **XtraMCP** framework [[PaperDebugger](#cite-paperdebugger) [Github](https://github.com/PaperDebugger/PaperDebugger), [XtraGPT](#cite-xtragpt) [Github](https://github.com/NuoJohnChen/XtraGPT)], powering the **PaperDebugger** writing assistant [[PaperDebugger](#cite-paperdebugger)]. It also provides the technological infrastructure required to operationalize the **Community-Federated Conference (CFC)** model, which addresses the sustainability crisis in centralized AI conferences [[Position](#cite-position) [Github](https://github.com/NuoJohnChen/AI_Conf_Crisis)].
+This repository provides a semantic literature retrieval and topic discovery engine built on vector embeddings and neural re-ranking. It performs high-precision academic paper search over ~700,000 arXiv papers, enabling researchers and conference organizers to ground research contexts in concrete literature and discover emerging research themes.
 
+The engine powers two interconnected projects:
+- **NextAIConf** (see [nextaiconf.com](https://nextaiconf.com)) — A deployed platform implementing the **Community-Federated Conference (CFC)** model, which addresses the sustainability crisis in centralized AI conferences through semantic paper curation and regional research theme discovery [[Position](#cite-position) [Github](https://github.com/NuoJohnChen/AI_Conf_Crisis)].
+- **PaperDebugger's XtraMCP Researcher Phase** (see [paperdebugger.com](https://www.paperdebugger.com/) or the source code [here](https://github.com/PaperDebugger/paperdebugger)) — An end-to-end academic writing assistant where this engine serves as the hallucination-free literature grounding component, retrieving verifiable citations based on the user's writing context.
 ---
 
-## 1. Core Concepts: What is this repository doing?
+## 1. Core Concept
 
-At its heart, this engine facilitates two opposing flows of information to bridge the gap between abstract research contexts and concrete academic literature:
+This engine was fundamentally designed for NextAIConf to solve conference curation challenges, with two bidirectional retrieval modes:
 
 ### ➡️ Context2Papers (From Idea to Literature)
 > *"I have a workshop theme or a paper draft, show me the relevant literature."*
 
-* **What it does:** It acts as a **Semantic Recommendation Engine**. Instead of relying on simple keywords, it takes a long-form "context" (such as a workshop description, a specific paragraph, or an abstract) and retrieves the most semantically relevant academic papers from a database of ~700,000 entries.
-* **Use Case:** Helping a researcher find citations for a specific claim, or helping a conference organizer find papers that fit a specific workshop theme.
+- **Semantic Recommendation Engine**. Takes long-form context (workshop descriptions, abstracts, paragraphs) and retrieves semantically relevant papers using vector similarity, not just keyword matching.
+* **Use Case:** Conference organizers finding papers that match workshop themes; researchers discovering citations for specific claims.
+
 
 ### ⬅️ Papers2Context (From Literature to Insights)
 > *"I have a pile of papers (e.g., from a specific region or year), tell me what they are about."*
 
-* **What it does:** It acts as a **Topic Discovery Engine**. It takes a filtered set of papers (e.g., "All papers published by Singaporean authors in 2025") and automatically clusters them to discover latent themes, research trends, and "contexts."
-* **Use Case:** Helping **Federated Regional Hub** organizers [[Position]](#cite-position) identify local research strengths to curate targeted workshops (e.g., discovering that a region has a high density of "Multimodal LLM" papers).
-
+**Topic Discovery Engine**. Clusters filtered paper sets (e.g., "Singapore 2025 authors") to reveal latent research trends and thematic patterns.
+* **Use Case:** **Federated Regional Hub** organizers [[Position]](#cite-position) identifying local research strengths (e.g., discovering regional concentration in "Multimodal LLMs") to curate targeted workshops.
 ---
 
-## 2. Technical Implementation
+## 2. Implementation
 
 To achieve the concepts above, the `app.py` engine utilizes a data pipeline and specific ML models:
 
@@ -46,7 +49,7 @@ The system relies on the `paperdb/` directory for data ingestion.
 
 ## 3. Role in XtraMCP & PaperDebugger
 
-This repository functions as the **Researcher Node** within the XtraMCP architecture, decoupling orchestration from reasoning [[XtraGPT]](#cite-xtragpt)[[PaperDebugger]](#cite-paperdebugger).
+This repository functions as the **Researcher Node** within the [XtraMCP](#cite-paperdebugger) architecture, decoupling orchestration from reasoning [[PaperDebugger]](#cite-paperdebugger). The information retrieved can later be used to complement the **Enhancer Node** within [XtraMCP](#cite-paperdebugger) which is powered by the [XtraGPT](#cite-xtragpt) model suite
 
 * **The Researcher of XtraMCP:**
     * It acts as the execution layer for the **Researcher Module**. When the XtraMCP control layer receives a user intent (e.g., "Find related work"), it routes the request to this backend via the Model Context Protocol (MCP).
@@ -66,7 +69,7 @@ The current centralized AI conference model is unsustainable due to exponential 
 * **Enabling Regional Hubs:** **Papers2Context** is critical for organizers of **Federated Regional Hubs**. By filtering the database by **region**, **date**, **categories in AI** and running topic discovery, organizers can identify local research themes. This restores the "Community Building" pillar by fostering meaningful, localized interactions rather than anonymous mega-conferences.
 
 ---
-## 5 Reference
+## 5. References
 <div id="cite-position"></div>
 
 ```bibtex
